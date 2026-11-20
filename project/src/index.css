@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: #F5F1E8;
+  color: #29352F;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #E8E3D8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9D8CF;
+  border-radius: 6px;
+  border: 2px solid #E8E3D8;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #29483B;
+}
+
+/* Selection */
+::selection {
+  background: #29483B;
+  color: #F5F1E8;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid #29483B;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Print styles for Legacy Summary */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: #FFFFFF !important;
+  }
+  .print-page {
+    box-shadow: none !important;
+    border: none !important;
+  }
+  @page {
+    margin: 1.5cm;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+/* Subtle texture for ivory backgrounds */
+.bg-ivory-texture {
+  background-color: #F5F1E8;
+  background-image: radial-gradient(circle at 1px 1px, rgba(41, 72, 59, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
